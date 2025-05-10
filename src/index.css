@@ -35,19 +35,19 @@
 
     --radius: 0.5rem;
 
-    --sidebar-background: 240 10% 16%;
+    --sidebar-background: 240 21% 15%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 217.2 91.2% 59.8%;
+    --sidebar-primary: 226 70% 55%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 217.2 32.6% 25%;
+    --sidebar-accent: 226 30% 20%;
     --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217.2 32.6% 30%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-border: 226 30% 25%;
+    --sidebar-ring: 226 70% 55%;
 
-    --blue-gradient-start: 233 61% 38%;
-    --blue-gradient-end: 180 100% 50%;
-    --purple-gradient-start: 271 76% 53%;
-    --purple-gradient-end: 265 100% 44%;
+    --blue-gradient-start: 226 70% 40%;
+    --blue-gradient-end: 210 100% 50%;
+    --purple-gradient-start: 250 76% 53%;
+    --purple-gradient-end: 226 70% 44%;
   }
 
   .dark {
@@ -79,14 +79,14 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
     
-    --sidebar-background: 240 10% 14%;
+    --sidebar-background: 240 21% 12%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: 226 76% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 13% 22%;
+    --sidebar-accent: 240 21% 18%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 13% 25%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-border: 240 21% 20%;
+    --sidebar-ring: 226 76% 55%;
   }
 }
 
@@ -110,16 +110,20 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-gray-300 rounded-full;
+    @apply bg-indigo-300 rounded-full;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-400;
+    @apply bg-indigo-400;
   }
 
   /* Custom gradient text */
   .gradient-text {
     @apply bg-gradient-to-r from-blue-gradient-start to-blue-gradient-end text-transparent bg-clip-text;
+  }
+  
+  .nimbus-text {
+    @apply bg-gradient-to-r from-indigo-600 to-blue-500 text-transparent bg-clip-text;
   }
 }
 
@@ -131,5 +135,25 @@
   .glass-card {
     backdrop-filter: blur(12px);
     background: rgba(255, 255, 255, 0.6);
+  }
+  
+  .nimbus-card {
+    @apply border border-indigo-100 shadow-lg rounded-lg overflow-hidden bg-white;
+  }
+  
+  .nimbus-gradient {
+    @apply bg-gradient-to-r from-indigo-600 to-blue-500;
+  }
+  
+  .nimbus-button {
+    @apply bg-gradient-to-r from-indigo-600 to-blue-500 text-white hover:from-indigo-700 hover:to-blue-600 transition-all shadow-md rounded-md px-4 py-2;
+  }
+  
+  .nimbus-input {
+    @apply border-indigo-200 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm;
+  }
+  
+  .nimbus-hover {
+    @apply transition-all hover:shadow-md hover:scale-[1.02];
   }
 }

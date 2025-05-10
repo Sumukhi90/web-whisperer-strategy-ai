@@ -9,7 +9,8 @@ import {
   Layers, 
   Network, 
   Zap,
-  ChevronRight
+  ChevronRight,
+  Code
 } from "lucide-react";
 import { 
   Sidebar as SidebarComponent,
@@ -32,6 +33,7 @@ export const Sidebar = () => {
     { icon: Database, label: "Financial", href: "#financial", description: "Analysis & Projections" },
     { icon: Layers, label: "SWOT Analysis", href: "#swot", description: "Strengths, Weaknesses, Opportunities, Threats" },
     { icon: Network, label: "Social Media", href: "#social", description: "Analytics & Insights" },
+    { icon: Code, label: "Nimbus API", href: "#nimbus", description: "AI Integration & Controls" },
     { icon: Settings, label: "Settings", href: "#settings", description: "Configuration & Preferences" },
   ];
 
@@ -39,15 +41,16 @@ export const Sidebar = () => {
     <SidebarComponent>
       <SidebarHeader className="p-4">
         <div className="flex items-center space-x-2">
-          <div className="h-8 w-8 rounded-md bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
-            <Database className="h-5 w-5 text-white" />
+          <div className="h-8 w-8 rounded-md bg-gradient-to-r from-indigo-600 to-blue-500 flex items-center justify-center shadow-lg">
+            <Search className="h-5 w-5 text-white" />
           </div>
-          <span className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
-            AI Analytics
+          <span className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-blue-500">
+            Nimbus AI
           </span>
         </div>
-        <div className="mt-3 bg-sidebar-accent/20 text-xs text-sidebar-foreground/70 py-1 px-3 rounded-md">
-          Pro Plan
+        <div className="mt-3 bg-sidebar-accent/20 text-xs text-sidebar-foreground/70 py-1 px-3 rounded-md flex items-center justify-center space-x-1">
+          <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Enterprise Plan</span>
         </div>
       </SidebarHeader>
       
@@ -79,10 +82,10 @@ export const Sidebar = () => {
       </SidebarContent>
       
       <SidebarFooter className="p-4">
-        <div className="rounded-md bg-sidebar-accent/20 p-3 text-center">
-          <p className="text-xs text-sidebar-foreground/70 mb-2">24/7 AI Assistant</p>
-          <button className="w-full text-xs py-1.5 rounded-md bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium transition-all hover:opacity-90">
-            Ask Questions
+        <div className="rounded-md bg-gradient-to-r from-indigo-600/10 to-blue-500/10 p-3 text-center border border-indigo-600/20">
+          <p className="text-xs text-sidebar-foreground/70 mb-2">Nimbus AI Assistant</p>
+          <button className="w-full text-xs py-1.5 rounded-md bg-gradient-to-r from-indigo-600 to-blue-500 text-white font-medium transition-all hover:opacity-90 shadow-md">
+            Ask Nimbus
           </button>
         </div>
       </SidebarFooter>
